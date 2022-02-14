@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "449635753916",
+    "project_id": "mikemix-ed238",
+    "storage_bucket": "mikemix-ed238.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449635753916:android:dddb440f09421e742555b9",
+        "android_client_info": {
+          "package_name": "com.brouken.player"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449635753916-kqri13e3er3kc0tutg0d88ahso9qles4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVH5O1MigUKY6MmurTXAhIQyF77KkG0MQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449635753916-kqri13e3er3kc0tutg0d88ahso9qles4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

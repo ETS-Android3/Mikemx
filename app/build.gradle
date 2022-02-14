@@ -1,0 +1,86 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 31
+    ndkVersion '21.4.7075529'
+
+    defaultConfig {
+        applicationId "com.brouken.player"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 97
+        versionName "0.97"
+        archivesBaseName = "Just.Player.v${versionName}"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "targetSdk"
+    productFlavors {
+        latest {
+            dimension "targetSdk"
+        }
+        legacy {
+            dimension "targetSdk"
+            applicationIdSuffix ".legacy"
+            versionNameSuffix "-legacy"
+            targetSdkVersion 29
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lint {
+        disable 'MissingTranslation'
+    }
+}
+
+dependencies {
+    def exoplayerVersion = '2.16.1'
+    implementation("com.google.android.exoplayer:exoplayer-common:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-extractor"
+    }
+    implementation("com.google.android.exoplayer:exoplayer-datasource:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-common"
+    }
+    implementation("com.google.android.exoplayer:exoplayer-decoder:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-common"
+    }
+    implementation("com.google.android.exoplayer:exoplayer-database:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-common"
+    }
+    implementation("com.google.android.exoplayer:extension-mediasession:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-common"
+    }
+    implementation("com.google.android.exoplayer:exoplayer-dash:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-core"
+    }
+    implementation("com.google.android.exoplayer:exoplayer-hls:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-core"
+    }
+    implementation("com.google.android.exoplayer:exoplayer-smoothstreaming:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-core"
+    }
+    implementation("com.google.android.exoplayer:exoplayer-rtsp:$exoplayerVersion") {
+        exclude group: "com.google.android.exoplayer", module: "exoplayer-core"
+    }
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.3'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    implementation 'com.ibm.icu:icu4j:70.1'
+    implementation 'com.arthenica:ffmpeg-kit-https:4.5.1.LTS'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation project(path: ':doubletapplayerview')
+    implementation project(path: ':android-file-chooser')
+    implementation fileTree(dir: "libs", include: ["extension-*.aar"])
+    implementation fileTree(dir: "libs", include: ["library-*.aar"])
+}
