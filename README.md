@@ -1,5 +1,4 @@
-# Mikemx (Video) Player 
-
+# IB (Video) Player 
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/moneytoo/Player.svg?logo=github&label=GitHub)](https://github.com/moneytoo/Player/releases/latest)
 [![Google Play](https://img.shields.io/endpoint?label=Google%20Play&logo=google-play&color=green&cacheSeconds=65536&url=https%3A%2F%2Fplayshields.herokuapp.com%2Fplay%3Fi%3Dcom.brouken.player%26l%3DGoogle%2520Play%26m%3Dv%24version)](https://play.google.com/store/apps/details?id=com.brouken.player)
 [![F-Droid](https://img.shields.io/f-droid/v/com.brouken.player.svg?logo=f-droid&label=F-Droid)](https://f-droid.org/packages/com.brouken.player/)
